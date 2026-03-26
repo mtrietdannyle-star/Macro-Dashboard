@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0a0e14;
+  color: #c9d1d9;
+}
+
+/* Terminal glow effects */
+.glow-green {
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
+}
+
+.glow-red {
+  text-shadow: 0 0 6px rgba(255, 68, 68, 0.4);
+}
+
+.glow-amber {
+  text-shadow: 0 0 6px rgba(255, 170, 0, 0.4);
+}
+
+/* Cursor blink */
+.cursor-blink {
+  animation: blink 1.2s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2937;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3748;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #1e2937 25%, #2d3748 50%, #1e2937 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Signal badges */
+.signal-bullish {
+  color: #00ff88;
+  border-color: rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.08);
+}
+
+.signal-bearish {
+  color: #ff4444;
+  border-color: rgba(255, 68, 68, 0.3);
+  background: rgba(255, 68, 68, 0.08);
+}
+
+.signal-neutral {
+  color: #ffaa00;
+  border-color: rgba(255, 170, 0, 0.3);
+  background: rgba(255, 170, 0, 0.08);
+}
+
+/* Recharts overrides */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #1e2937;
+}
+
+.recharts-text {
+  fill: #4a5568;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+}

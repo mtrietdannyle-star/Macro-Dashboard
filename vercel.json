@@ -1,0 +1,11 @@
+{
+  "framework": "vite",
+  "functions": {
+    "api/market.js": {
+      "maxDuration": 15
+    },
+    "api/fred.js": {
+      "maxDuration": 30
+    }
+  }
+}
